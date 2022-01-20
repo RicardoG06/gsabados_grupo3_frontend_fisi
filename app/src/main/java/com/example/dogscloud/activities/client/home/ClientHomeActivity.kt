@@ -9,6 +9,7 @@ import com.example.dogscloud.R
 import com.example.dogscloud.activities.SignInActivity
 import com.example.dogscloud.models.User
 import com.example.dogscloud.utils.SharedPref
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.gson.Gson
 
 class ClientHomeActivity : AppCompatActivity() {

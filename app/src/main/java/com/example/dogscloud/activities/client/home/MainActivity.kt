@@ -1,13 +1,16 @@
 package com.example.dogscloud.activities.client.home
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dogscloud.R
 
 import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.dogscloud.utils.SharedPref
 import com.example.dogscloud.activities.Fragments.cerrarsesion.CerrarSesionFragment
 import com.example.dogscloud.activities.Fragments.contactanos.ContactanosFragment
 import com.example.dogscloud.activities.Fragments.eliminarcuenta.EliminarCuentaFragment
@@ -16,13 +19,16 @@ import com.example.dogscloud.activities.Fragments.menu.InicioFragment
 import com.example.dogscloud.activities.Fragments.mispedidos.MisPedidosFragment
 import com.example.dogscloud.activities.Fragments.misservicios.MisServiciosFragment
 import com.example.dogscloud.activities.Fragments.seunpaseador.PaseadorFragment
+import com.example.dogscloud.activities.SignInActivity
 import com.google.android.material.navigation.NavigationView
+
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var toogle: ActionBarDrawerToggle
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navView: NavigationView
+    var sharedPref: SharedPref? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +36,8 @@ class MainActivity : AppCompatActivity() {
 
         drawerLayout = findViewById(R.id.drawerLayout)
         navView = findViewById(R.id.navView)
+        var btn_cerrarsesion: Button? = null
+        sharedPref = SharedPref(this)
 
         toogle = ActionBarDrawerToggle(this, drawerLayout, R.string.open_drawer, R.string.close_drawer)
         drawerLayout.addDrawerListener(toogle)
@@ -37,6 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.title = "Dog's in Cloud"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        btn_cerrarsesion = findViewById(R.id.btn_logout)
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId) {
@@ -84,7 +93,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_cerrar_sesion -> {
                     supportFragmentManager.beginTransaction().apply {
-                        replace(R.id.fragmentContainerView, CerrarSesionFragment())
+                        logout()
                         commit()
                     }
                 }
@@ -94,6 +103,8 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -101,5 +112,11 @@ class MainActivity : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun logout(){
+        sharedPref?.remove("user")
+        val i = Intent(this, SignInActivity::class.java)
+        startActivity(i)
     }
 }
