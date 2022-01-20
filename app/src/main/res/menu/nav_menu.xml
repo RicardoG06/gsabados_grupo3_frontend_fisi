@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_inicio"
+        android:title="Inicio"
+        android:icon="@drawable/ic_baseline_home_24" />
+    <item
+        android:id="@+id/nav_mis_mascotas"
+        android:title="Mis Mascotas"
+        android:icon="@drawable/ic_baseline_pets_24" />
+    <item
+        android:id="@+id/nav_mis_pedidos"
+        android:title="Mis Pedidos"
+        android:icon="@drawable/ic_baseline_add_shopping_cart_24" />
+    <item
+        android:id="@+id/nav_mis_servicios"
+        android:title="Mis Servicios"
+        android:icon="@drawable/ic_baseline_computer_24" />
+    <item
+        android:id="@+id/nav_paseador"
+        android:title="Quiero ser Paseador"
+        android:icon="@drawable/ic_baseline_directions_run_24" />
+    <item
+        android:id="@+id/nav_contactanos"
+        android:title="Contáctanos"
+        android:icon="@drawable/ic_baseline_contact_page_24" />
+    <item
+        android:id="@+id/nav_eliminar_cuenta"
+        android:title="Eliminar Cuenta"
+        android:icon="@drawable/ic_baseline_delete_24" />
+    <item
+        android:id="@+id/nav_cerrar_sesion"
+        android:title="Cerrar Sesión"
+        android:icon="@drawable/ic_baseline_logout_24" />
+</menu>
