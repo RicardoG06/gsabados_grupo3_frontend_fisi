@@ -8,6 +8,7 @@
     <color name="yellow">#E9E096</color>
     <color name="pink">#E3D2FF</color>
     <color name="gray">#C2C2C2</color>
+    <color name="gray_light">#CBF6F5F5</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grayDark">#686868</color>
@@ -21,5 +22,11 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
+    <color name="purple">#731A6D</color>
+    <color name="sky">#8EF0F7</color>
+    <color name="sky_accent">#65B4BA</color>
+    <color name="app">#AE0D67</color>
+    <color name="app_accent">#BF0F61</color>
+    <color name="celeste">#8EF0F7</color>
 
 </resources>

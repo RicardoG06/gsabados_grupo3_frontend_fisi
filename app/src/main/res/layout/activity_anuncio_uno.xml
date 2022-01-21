@@ -80,6 +80,7 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_gravity="center"
+        app:backgroundTint="@color/gray"
         android:layout_marginTop="400dp"
         android:background="@drawable/boton_redondo_plomo"/>
 
@@ -90,6 +91,7 @@
         android:layout_gravity="center"
         android:layout_marginLeft="65dp"
         android:layout_marginTop="400dp"
+        app:backgroundTint="@color/gray"
         android:background="@drawable/boton_redondo_plomo"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

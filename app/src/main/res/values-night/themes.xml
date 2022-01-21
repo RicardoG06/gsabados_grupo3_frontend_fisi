@@ -13,4 +13,9 @@
         <!-- Customize your theme here. -->
 
     </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.Dogscloud">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
 </resources>

@@ -78,7 +78,7 @@ class SignUpActivity : AppCompatActivity() {
 
                     if(response.body()?.isSuccess == true){
                         saveUserInSession(response.body()?.data.toString())
-                        goToRecommendation()
+                        goToclientHome()
                     }
 
                     Toast.makeText(this@SignUpActivity, response.body()?.message, Toast.LENGTH_LONG).show()
@@ -154,8 +154,11 @@ class SignUpActivity : AppCompatActivity() {
         startActivity(i)
     }
 
-    private fun goToRecommendation(){
-        val i = Intent(this, AnuncioUnoActivity::class.java)
+
+
+    private fun goToclientHome(){
+        val i = Intent(this, SaveImageActivity::class.java)
+        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(i)
     }
 }

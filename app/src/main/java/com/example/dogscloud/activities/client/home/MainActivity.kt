@@ -3,6 +3,7 @@ package com.example.dogscloud.activities.client.home
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.dogscloud.R
 
 import android.view.MenuItem
@@ -20,7 +21,9 @@ import com.example.dogscloud.activities.Fragments.mispedidos.MisPedidosFragment
 import com.example.dogscloud.activities.Fragments.misservicios.MisServiciosFragment
 import com.example.dogscloud.activities.Fragments.seunpaseador.PaseadorFragment
 import com.example.dogscloud.activities.SignInActivity
+import com.example.dogscloud.models.User
 import com.google.android.material.navigation.NavigationView
+import com.google.gson.Gson
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,7 +39,6 @@ class MainActivity : AppCompatActivity() {
 
         drawerLayout = findViewById(R.id.drawerLayout)
         navView = findViewById(R.id.navView)
-        var btn_cerrarsesion: Button? = null
         sharedPref = SharedPref(this)
 
         toogle = ActionBarDrawerToggle(this, drawerLayout, R.string.open_drawer, R.string.close_drawer)
@@ -45,7 +47,8 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.title = "Dog's in Cloud"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        btn_cerrarsesion = findViewById(R.id.btn_logout)
+
+        getUserFromSession()
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId) {
@@ -102,9 +105,6 @@ class MainActivity : AppCompatActivity() {
 
             true
         }
-
-
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -118,5 +118,16 @@ class MainActivity : AppCompatActivity() {
         sharedPref?.remove("user")
         val i = Intent(this, SignInActivity::class.java)
         startActivity(i)
+    }
+
+    private fun getUserFromSession(){
+
+        val gson = Gson()
+
+        if(!sharedPref?.getData("user").isNullOrBlank()){
+            // si el usuario existe en sesion
+            val user = gson.fromJson(sharedPref?.getData("user"), User::class.java)
+            Log.d("MainActivity", "Usuario: $user")
+        }
     }
 }

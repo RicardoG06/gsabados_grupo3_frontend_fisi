@@ -15,11 +15,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="¡Hola! Ofrecemos los mejores servicios
-en cuidado y paseo de tus pequeños"
+            android:text="¡Hola! Ofrecemos los mejores servicios en cuidado y paseo de tus pequeños"
             android:textColor="@color/black"
             android:layout_marginBottom="18dp"/>
         <LinearLayout
+            android:id="@+id/btn_paseador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_beige"
@@ -123,6 +123,7 @@ en cuidado y paseo de tus pequeños"
                     android:gravity="center_horizontal" />
             </LinearLayout>
         </LinearLayout>
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

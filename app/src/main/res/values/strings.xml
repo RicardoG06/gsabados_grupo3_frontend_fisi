@@ -15,4 +15,9 @@
     <string name="open_drawer">Open</string>
     <string name="close_drawer">Close</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <!--Últimos agregados-->
+    <string name="nameLogo">Dog’s in Cloud</string>
+    <string name="nuestros_paseadores">Nuestros paseadores</string>
+    <string name="buscar_por">Buscar por:</string>
+    <string name="btnCamara">Camara</string>
 </resources>

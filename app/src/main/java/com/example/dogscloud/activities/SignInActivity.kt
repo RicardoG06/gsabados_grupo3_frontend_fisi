@@ -1,6 +1,7 @@
 package com.example.dogscloud.activities
 
 import android.content.Intent
+import android.content.Intent.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -9,9 +10,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.dogscloud.R
-import com.example.dogscloud.activities.Fragments.menu.InicioFragment
+import com.example.dogscloud.activities.admin.home.AdminHomeActivity
 import com.example.dogscloud.activities.client.home.AnuncioUnoActivity
-import com.example.dogscloud.activities.client.home.ClientHomeActivity
 import com.example.dogscloud.activities.client.home.MainActivity
 import com.example.dogscloud.models.ResponseHttp
 import com.example.dogscloud.models.User
@@ -35,8 +35,8 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         botonGoToSingUp = findViewById(R.id.buttonNewAcccount)
-        editTextEmail = findViewById(R.id.edittext_email)
-        editTextPassword = findViewById(R.id.edittext_password)
+        editTextEmail = findViewById(R.id.userInput)
+        editTextPassword = findViewById(R.id.passwordInput)
         buttonLogin = findViewById(R.id.btn_login)
 
         botonGoToSingUp?.setOnClickListener{
@@ -64,7 +64,7 @@ class SignInActivity : AppCompatActivity() {
                         Toast.makeText(this@SignInActivity, response.body()?.message, Toast.LENGTH_LONG).show()
 
                         saveUserInSession(response.body()?.data.toString())
-                        goToRecommendation()
+
                     }
                     else{
                         Toast.makeText(this@SignInActivity,"Los datos no son correctos", Toast.LENGTH_LONG).show()
@@ -88,6 +88,14 @@ class SignInActivity : AppCompatActivity() {
         val gson = Gson()
         val user = gson.fromJson(data, User::class.java)
         sharedPref.save("user", user)
+
+        if(user.roles?.size!! > 1){ //TIENE MAS DE UN ROL
+            goToSelectRol()
+        }
+        else{ //SOLO UN ROL
+            goToClientHome()
+        }
+
     }
 
     fun String.isEmailValid(): Boolean{
@@ -116,7 +124,20 @@ class SignInActivity : AppCompatActivity() {
             // si el usuario existe en sesion
             val user = gson.fromJson(sharedPref.getData("user"), User::class.java)
 
-            goToClientHome()
+            if(!sharedPref.getData("rol").isNullOrBlank()){
+                //Si el usuario seleccion el rol
+                val rol = sharedPref.getData("rol")?.replace("\"","")
+                Log.d("SignInActivity", "ROL $rol")
+
+                if(rol == "ADMINISTRADOR"){
+                    goToAdminHome()
+                } else if (rol == "CLIENTE") {
+                    goToClientHome()
+                }
+            }
+            else{
+                goToClientHome()
+            }
         }
     }
 
@@ -127,11 +148,19 @@ class SignInActivity : AppCompatActivity() {
 
     private fun goToClientHome(){
         val i = Intent(this, MainActivity::class.java)
+        i.flags = FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK //Eliminar historia de pantalla
         startActivity(i)
     }
 
-    private fun goToRecommendation(){
-        val i = Intent(this, AnuncioUnoActivity::class.java)
+    private fun goToAdminHome(){
+        val i = Intent(this, AdminHomeActivity::class.java)
+        i.flags = FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK //Eliminar historia de pantalla
+        startActivity(i)
+    }
+
+    private fun goToSelectRol(){
+        val i = Intent(this, SelectRolesActivity::class.java)
+        i.flags = FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK //Eliminar historia de pantalla
         startActivity(i)
     }
 

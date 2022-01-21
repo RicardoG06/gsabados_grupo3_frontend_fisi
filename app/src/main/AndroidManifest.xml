@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.dogscloud">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +19,50 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dogscloud"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.Fragments.mascotas.EditarMascotasMenu"
+            android:exported="true"
+            android:parentActivityName=".activities.client.home.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.Fragments.mascotas.AgregarMascotasMenu"
+            android:exported="true"
+            android:parentActivityName=".activities.client.home.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.Fragments.menu.programapaseo.PantallaPaseadorActivity"
+            android:exported="true"
+            android:parentActivityName=".activities.client.home.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SaveImageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.admin.home.AdminHomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.SelectRolesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.Fragments.menu.programapaseo.SolicitarPaseo"
+            android:exported="true"
+            android:parentActivityName=".activities.Fragments.menu.programapaseo.SolicitarCantidad"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.Fragments.menu.programapaseo.SolicitarCantidad"
+            android:exported="true"
+            android:parentActivityName=".activities.Fragments.menu.programapaseo.SolicitarPaseo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.Fragments.menu.programapaseo.SeleccionarMascota"
+            android:exported="true"
+            android:parentActivityName=".activities.Fragments.menu.programapaseo.SolicitarCantidad"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.Fragments.menu.programapaseo.PaseadorEscogido"
+            android:exported="true"
+            android:parentActivityName=".activities.Fragments.menu.programapaseo.PantallaPaseadorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.client.home.MainActivity"
             android:exported="true" />
@@ -29,15 +79,14 @@
             android:name=".activities.client.home.AnuncioUnoActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.client.home.ClientHomeActivity"
-            android:exported="true" />
-        <activity
             android:name=".activities.SignUpActivity"
             android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.SignInActivity"
             android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

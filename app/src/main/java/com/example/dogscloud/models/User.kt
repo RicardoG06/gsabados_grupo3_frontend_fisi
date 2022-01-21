@@ -1,6 +1,8 @@
 package com.example.dogscloud.models
 
+import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
+import java.util.ArrayList
 
 class User(
     @SerializedName("id") val id: String? = null,
@@ -14,8 +16,13 @@ class User(
     @SerializedName("image") val image: String? = null,
     @SerializedName("session_token") val sessionToken: String? = null,
     @SerializedName("is_available") val isAvailable: String? = null,
+    @SerializedName("roles") val roles: ArrayList<rol_ad_usu>? = null
 ) {
     override fun toString(): String {
-        return "User(id=$id, name='$name', lastname='$lastname', email='$email', dni='$dni', edad='$edad', phone='$phone', password='$password', image=$image, sessionToken=$sessionToken, isAvailable=$isAvailable)"
+        return "User(id=$id, name='$name', lastname='$lastname', email='$email', dni='$dni', edad='$edad', phone=$phone, password='$password', image=$image, sessionToken=$sessionToken, isAvailable=$isAvailable, roles=$roles)"
+    }
+
+    fun toJson(): String{
+        return Gson().toJson(this)
     }
 }
