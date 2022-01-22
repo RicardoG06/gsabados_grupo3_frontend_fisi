@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -34,7 +35,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_gravity="bottom"
         android:gravity="center">
         <Button
             android:id="@+id/btn_agregarmascotas"
@@ -43,10 +43,10 @@
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:text="Agregar mascotas"
-            android:layout_marginTop="650dp"
+            android:layout_marginTop="550dp"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/celeste"
+            app:backgroundTint="@color/celeste"
             android:background="@drawable/rounded_button"/>
     </LinearLayout>
 
-</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

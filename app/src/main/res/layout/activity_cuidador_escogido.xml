@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Fragments.menu.programacuidado.CuidadorEscogido">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/primaryColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/white">
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/paseador"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            app:civ_shadow="true"
+            app:civ_shadow_radius="5dp"
+            app:civ_shadow_color="#9C9B9B"
+            app:civ_shadow_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Daniel Santos Zapata Barreto"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star_yellow" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star_yellow" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star_yellow" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star_yellow" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star_grey" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Telefono:"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_1"
+                android:shadowColor="@color/green"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:text="956865978"
+                android:textSize="15sp"
+                android:background="@drawable/rect_2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Correo electronico:"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_1"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:text="danielZapata@gmail.com"
+                android:textSize="15sp"
+                android:background="@drawable/rect_2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Disponibilidad:"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_1"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Diaria"
+                android:textSize="15sp"
+                android:background="@drawable/rect_2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Precio x hora de cuidado:"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_1"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:text="42 soles x mascota"
+                android:textSize="15sp"
+                android:background="@drawable/rect_2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Precio x hora de paseo:"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_1"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:text="37 soles x mascota"
+                android:textSize="15sp"
+                android:background="@drawable/rect_2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Direccion:"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_1"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:text="San Isidro"
+                android:textSize="15sp"
+                android:background="@drawable/rect_2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_go_to_solicitarcantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple"
+                android:fontFamily="@font/lato_bold"
+                android:text="¡Yo te elijo!"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

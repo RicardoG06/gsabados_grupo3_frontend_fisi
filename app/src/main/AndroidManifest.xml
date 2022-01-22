@@ -20,15 +20,40 @@
         android:theme="@style/Theme.Dogscloud"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activities.Fragments.mascotas.EditarMascotasMenu"
+            android:name=".activities.Fragments.menu.programacuidado.SolicitarCuidado"
+            android:exported="true"
+            android:parentActivityName=".activities.Fragments.menu.programacuidado.SolicitarCantidadCu"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.Fragments.menu.programacuidado.SolicitarCantidadCu"
+            android:exported="true"
+            android:parentActivityName=".activities.Fragments.menu.programacuidado.SolicitarCuidado"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.Fragments.menu.programacuidado.SeleccionarMascotaCu"
+            android:exported="true"
+            android:parentActivityName=".activities.Fragments.menu.programacuidado.SolicitarCantidadCu"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.Fragments.menu.programacuidado.CuidadorEscogido"
+            android:exported="true"
+            android:parentActivityName=".activities.Fragments.menu.programacuidado.PantallaCuidadorActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.Fragments.menu.programacuidado.PantallaCuidadorActivity"
             android:exported="true"
             android:parentActivityName=".activities.client.home.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
+            android:name=".activities.Fragments.mascotas.EditarMascotasMenu"
+            android:exported="true"
+            android:parentActivityName=".activities.client.home.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".activities.Fragments.mascotas.AgregarMascotasMenu"
             android:exported="true"
             android:parentActivityName=".activities.client.home.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programapaseo.PantallaPaseadorActivity"
             android:exported="true"

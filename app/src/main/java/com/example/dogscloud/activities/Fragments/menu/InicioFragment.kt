@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 
 import com.example.dogscloud.R
+import com.example.dogscloud.activities.Fragments.menu.programacuidado.PantallaCuidadorActivity
 import com.example.dogscloud.activities.Fragments.menu.programapaseo.PantallaPaseadorActivity
 import com.example.dogscloud.activities.Fragments.menu.programapaseo.PaseadorEscogido
 import com.example.dogscloud.models.User
@@ -21,6 +22,7 @@ class InicioFragment : Fragment() {
 
     var myView: View? = null
     var btn_paseador: LinearLayout? = null
+    var btn_cuidador: LinearLayout? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,9 +32,14 @@ class InicioFragment : Fragment() {
         // Inflate the layout for this fragment
         myView =  inflater.inflate(R.layout.fragment_inicio, container, false)
         btn_paseador = myView?.findViewById(R.id.btn_paseador)
+        btn_cuidador = myView?.findViewById(R.id.btn_cuidador)
 
         btn_paseador?.setOnClickListener{
             goToPaseador()
+        }
+
+        btn_cuidador?.setOnClickListener{
+            goToCuidador()
         }
 
         return myView
@@ -40,6 +47,11 @@ class InicioFragment : Fragment() {
 
     private fun goToPaseador(){
         val i = Intent(getActivity(), PantallaPaseadorActivity::class.java)
+        getActivity()?.startActivity(i)
+    }
+
+    private fun goToCuidador(){
+        val i = Intent(getActivity(), PantallaCuidadorActivity::class.java)
         getActivity()?.startActivity(i)
     }
 }

@@ -11,6 +11,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/primaryColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/white">
+        </androidx.appcompat.widget.Toolbar>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -124,7 +133,7 @@
             android:text="Guardar"
             android:layout_marginTop="150dp"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/celeste"
+            app:backgroundTint="@color/celeste"
             android:background="@drawable/rounded_button"/>
     </LinearLayout>
 
