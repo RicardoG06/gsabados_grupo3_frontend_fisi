@@ -14,6 +14,7 @@ import com.example.dogscloud.R
 import com.example.dogscloud.activities.Fragments.menu.programacuidado.PantallaCuidadorActivity
 import com.example.dogscloud.activities.Fragments.menu.programapaseo.PantallaPaseadorActivity
 import com.example.dogscloud.activities.Fragments.menu.programapaseo.PaseadorEscogido
+import com.example.dogscloud.activities.Fragments.menu.trabajadores.MisTrabajadores
 import com.example.dogscloud.models.User
 import com.example.dogscloud.utils.SharedPref
 import com.google.gson.Gson
@@ -23,6 +24,7 @@ class InicioFragment : Fragment() {
     var myView: View? = null
     var btn_paseador: LinearLayout? = null
     var btn_cuidador: LinearLayout? = null
+    var btn_trabajadores: LinearLayout? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +35,7 @@ class InicioFragment : Fragment() {
         myView =  inflater.inflate(R.layout.fragment_inicio, container, false)
         btn_paseador = myView?.findViewById(R.id.btn_paseador)
         btn_cuidador = myView?.findViewById(R.id.btn_cuidador)
+        btn_trabajadores = myView?.findViewById(R.id.Trabajadores)
 
         btn_paseador?.setOnClickListener{
             goToPaseador()
@@ -40,6 +43,10 @@ class InicioFragment : Fragment() {
 
         btn_cuidador?.setOnClickListener{
             goToCuidador()
+        }
+
+        btn_trabajadores?.setOnClickListener{
+            goToTrabajadores()
         }
 
         return myView
@@ -54,4 +61,11 @@ class InicioFragment : Fragment() {
         val i = Intent(getActivity(), PantallaCuidadorActivity::class.java)
         getActivity()?.startActivity(i)
     }
+
+    private fun goToTrabajadores(){
+        val i = Intent(getActivity(), MisTrabajadores::class.java)
+        getActivity()?.startActivity(i)
+    }
+
+
 }

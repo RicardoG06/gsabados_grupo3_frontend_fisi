@@ -20,35 +20,45 @@
         android:theme="@style/Theme.Dogscloud"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.Fragments.menu.trabajadores.VerTrabajador"
+            android:exported="true"
+            android:parentActivityName=".activities.Fragments.menu.trabajadores.MisTrabajadores"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.Fragments.menu.trabajadores.MisTrabajadores"
+            android:exported="false"
+            android:parentActivityName=".activities.client.home.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
             android:name=".activities.Fragments.menu.programapaseo.MascotasPa.MisMascotasPa"
             android:exported="true"
             android:parentActivityName=".activities.Fragments.menu.programapaseo.SeleccionarMascota"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programapaseo.MascotasPa.EditarMascotasPa"
             android:exported="true"
             android:parentActivityName=".activities.Fragments.menu.programapaseo.MascotasPa.MisMascotasPa"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programapaseo.MascotasPa.AgregarMascotasPa"
             android:exported="true"
             android:parentActivityName=".activities.Fragments.menu.programapaseo.MascotasPa.MisMascotasPa"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programacuidado.MascotasCu.AgregarMascotasCu"
             android:exported="true"
             android:parentActivityName=".activities.Fragments.menu.programacuidado.MascotasCu.MisMascotasCu"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programacuidado.MascotasCu.EditarMascotasCu"
             android:exported="true"
             android:parentActivityName=".activities.Fragments.menu.programacuidado.MascotasCu.MisMascotasCu"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programacuidado.MascotasCu.MisMascotasCu"
             android:exported="true"
             android:parentActivityName=".activities.Fragments.menu.programacuidado.SeleccionarMascotaCu"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programacuidado.SolicitarCuidado"
             android:exported="true"

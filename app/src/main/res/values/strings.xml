@@ -19,6 +19,7 @@
     <string name="nameLogo">Dog’s in Cloud</string>
     <string name="nuestros_paseadores">Nuestros paseadores</string>
     <string name="nuestros_cuidadores">Nuestros cuidadores</string>
+    <string name="nuestros_trabajadores">Nuestros trabajadores</string>
     <string name="buscar_por">Buscar por:</string>
     <string name="btnCamara">Camara</string>
 </resources>
