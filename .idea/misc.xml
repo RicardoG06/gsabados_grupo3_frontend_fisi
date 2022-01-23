@@ -28,6 +28,7 @@
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/drawable/rounded_skyblue.xml" value="0.20729166666666668" />
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/drawable/rounded_violet.xml" value="0.20729166666666668" />
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_admin_home.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_agregar_mascota_inicio.xml" value="0.1921875" />
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_agregar_mascotas_cu.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_agregar_mascotas_menu.xml" value="0.22" />
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_agregar_mascotas_pa.xml" value="0.2942708333333333" />
@@ -51,7 +52,7 @@
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_seleccion_paseador.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_seleccionar_mascota.xml" value="0.11614583333333334" />
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_seleccionar_mascota_cu.xml" value="0.1921875" />
-        <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_select_roles.xml" value="0.10208333333333333" />
+        <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_select_roles.xml" value="0.22" />
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_sign_in.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_sign_up.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/ricar/Proyectos/Aplicaciones Mobiles/App Dogs in Cloud/dogscloud/app/src/main/res/layout/activity_solicitar_cantidad.xml" value="0.22" />

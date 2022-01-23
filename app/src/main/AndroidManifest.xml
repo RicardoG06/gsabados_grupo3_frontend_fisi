@@ -20,15 +20,18 @@
         android:theme="@style/Theme.Dogscloud"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.client.home.AgregarMascotaInicio"
+            android:exported="false" />
+        <activity
             android:name=".activities.Fragments.menu.trabajadores.VerTrabajador"
             android:exported="true"
             android:parentActivityName=".activities.Fragments.menu.trabajadores.MisTrabajadores"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.trabajadores.MisTrabajadores"
             android:exported="false"
             android:parentActivityName=".activities.client.home.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programapaseo.MascotasPa.MisMascotasPa"
             android:exported="true"

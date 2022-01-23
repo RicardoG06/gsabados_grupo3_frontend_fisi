@@ -4,6 +4,7 @@ import android.app.DownloadManager
 import com.example.dogscloud.api.ApiRoutes
 import com.example.dogscloud.models.ResponseHttp
 import com.example.dogscloud.models.User
+import com.example.dogscloud.models.Perritos
 import com.example.dogscloud.routes.UsersRoutes
 import okhttp3.MediaType
 import okhttp3.MultipartBody
@@ -13,10 +14,13 @@ import java.io.File
 
 class UsersProvider {
     private var usersRoutes: UsersRoutes? = null
-
     init {
         val api = ApiRoutes()
         usersRoutes = api.getUserRoutes()
+    }
+
+    fun registerP(perritos: Perritos): Call<ResponseHttp>?{
+        return  usersRoutes?.registerP(perritos)
     }
 
     fun register(user: User): Call<ResponseHttp>?{

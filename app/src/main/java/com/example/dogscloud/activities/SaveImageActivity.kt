@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.dogscloud.R
+import com.example.dogscloud.activities.client.home.AgregarMascotaInicio
 import com.example.dogscloud.activities.client.home.AnuncioUnoActivity
 import com.example.dogscloud.activities.client.home.MainActivity
 import com.example.dogscloud.models.ResponseHttp
@@ -93,8 +94,7 @@ class SaveImageActivity : AppCompatActivity() {
     }
 
     private fun goToRecomendation(){
-        val i = Intent(this, AnuncioUnoActivity::class.java)
-        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK //Eliminar historia de pantalla
+        val i = Intent(this, AgregarMascotaInicio::class.java)
         startActivity(i)
     }
 
@@ -123,8 +123,6 @@ class SaveImageActivity : AppCompatActivity() {
         sharedPref?.save("user", user)
 
         goToRecomendation()
-
-
     }
 
     private fun selectImage(){

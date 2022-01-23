@@ -2,6 +2,7 @@ package com.example.dogscloud.routes
 
 import com.example.dogscloud.models.ResponseHttp
 import com.example.dogscloud.models.User
+import com.example.dogscloud.models.Perritos
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -10,6 +11,9 @@ import retrofit2.http.*
 interface UsersRoutes {
     @POST("users/create")
     fun register(@Body user: User): Call<ResponseHttp>
+
+    @POST("perritos/create")
+    fun registerP(@Body perritos: Perritos): Call<ResponseHttp>
 
     @FormUrlEncoded
     @POST("users/login")

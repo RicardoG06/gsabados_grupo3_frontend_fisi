@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.client.home.AgregarMascotaInicio">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/primaryColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/white">
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Queremos conocer a tu mascota!"
+            android:textSize="18sp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/edit_nombremascota"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Su nombre es"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:inputType="text"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:background="@drawable/edittext_custom"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuentanos sobre su comportamiento"
+            android:textSize="18sp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/edit_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Su descripción es"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:inputType="text"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:background="@drawable/edittext_custom"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Qué raza es?"
+            android:textSize="18sp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/edit_raza"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Su descripción es"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:inputType="text"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:background="@drawable/edittext_custom"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cual es su edad?"
+            android:textSize="18sp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/edit_edad"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Su descripción es"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:inputType="text"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:background="@drawable/edittext_custom"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sube una foto de tu mascota"
+            android:textSize="18sp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"/>
+
+
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImage_user"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/camara"
+        android:layout_marginTop="400dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_agregarmascotas"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/celeste"
+            android:text="Guardar" />
+
+        <Button
+        android:id="@+id/btn_siguiente"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="-10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/celeste"
+        android:text="Siguiente" />
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
