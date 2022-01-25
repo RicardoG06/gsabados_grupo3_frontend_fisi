@@ -19,10 +19,6 @@ class UsersProvider {
         usersRoutes = api.getUserRoutes()
     }
 
-    fun registerP(perritos: Perritos): Call<ResponseHttp>?{
-        return  usersRoutes?.registerP(perritos)
-    }
-
     fun register(user: User): Call<ResponseHttp>?{
         return usersRoutes?.register(user)
     }
@@ -30,6 +26,11 @@ class UsersProvider {
     fun login(email: String, password: String): Call<ResponseHttp>?{
         return usersRoutes?.login(email, password)
     }
+
+    fun loginValidacion(email: String?): Call<ResponseHttp>?{
+        return usersRoutes?.loginVali(email)
+    }
+
     fun update(file: File, user: User ): Call<ResponseHttp>?{
         val reqFile = RequestBody.create(MediaType.parse("image/*"), file)
         val image = MultipartBody.Part.createFormData("image", file.name , reqFile)

@@ -90,7 +90,12 @@ class SignInActivity : AppCompatActivity() {
         sharedPref.save("user", user)
 
         if(user.roles?.size!! > 1){ //TIENE MAS DE UN ROL
-            goToSelectRol()
+            if(user.roles.get(0).id == user.roles.get(1).id){
+                goToClientHome()
+            }
+            else{
+                goToSelectRol()
+            }
         }
         else{ //SOLO UN ROL
             goToClientHome()

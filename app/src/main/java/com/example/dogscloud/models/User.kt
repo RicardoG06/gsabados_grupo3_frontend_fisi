@@ -16,13 +16,16 @@ class User(
     @SerializedName("image") val image: String? = null,
     @SerializedName("session_token") val sessionToken: String? = null,
     @SerializedName("is_available") val isAvailable: String? = null,
-    @SerializedName("roles") val roles: ArrayList<rol_ad_usu>? = null
+    @SerializedName("roles") val roles: ArrayList<rol_ad_usu>? = null,
+    @SerializedName("perritos") val perritos: ArrayList<Perritos>? = null
 ) {
-    override fun toString(): String {
-        return "User(id=$id, name='$name', lastname='$lastname', email='$email', dni='$dni', edad='$edad', phone=$phone, password='$password', image=$image, sessionToken=$sessionToken, isAvailable=$isAvailable, roles=$roles)"
-    }
+
 
     fun toJson(): String{
         return Gson().toJson(this)
+    }
+
+    override fun toString(): String {
+        return "User(id=$id, name='$name', lastname='$lastname', email='$email', dni='$dni', edad='$edad', phone=$phone, password='$password', image=$image, sessionToken=$sessionToken, isAvailable=$isAvailable, roles=$roles, perritos=$perritos)"
     }
 }
