@@ -1,6 +1,7 @@
 package com.example.dogscloud.api
 
 import com.example.dogscloud.routes.PerritosRoutes
+import com.example.dogscloud.routes.TrabajadoresRoutes
 import com.example.dogscloud.routes.UsersRoutes
 
 class ApiRoutes {
@@ -15,4 +16,10 @@ class ApiRoutes {
     fun getPerritosrRoutes(): PerritosRoutes{
         return retrofit.getClient(API_URL).create(PerritosRoutes::class.java)
     }
+
+    fun getTrabajadoresRoutes(): TrabajadoresRoutes{
+        return retrofit.getClient(API_URL).create(TrabajadoresRoutes::class.java)
+    }
+
+
 }

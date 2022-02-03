@@ -22,4 +22,6 @@
     <string name="nuestros_trabajadores">Nuestros trabajadores</string>
     <string name="buscar_por">Buscar por:</string>
     <string name="btnCamara">Camara</string>
+    <string name="google_map_api_key">AIzaSyAnUnzHN03rafq8y7G3WMDaJ1fwoWz8qzg</string>
+
 </resources>

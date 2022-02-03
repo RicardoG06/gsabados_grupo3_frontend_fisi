@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.Fragments.menu.programacuidado.SolicitarCuidado">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -21,23 +17,32 @@
         </androidx.appcompat.widget.Toolbar>
 
         <TextView
+            android:id="@+id/titulo_seleccion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Selección de días de paseo"
-            android:fontFamily="@font/roboto_medium"
-            android:textSize="20sp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="25dp" />
+            android:text="Direccion , Fecha y Hora"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_goneMarginLeft="20dp"
+            app:layout_goneMarginTop="36dp"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            />
 
         <TextView
+            android:id="@+id/dia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Día 1:"
+            android:text="Fecha y hora:"
             android:fontFamily="@font/roboto_medium"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_seleccion"/>
 
         <EditText
+            android:id="@+id/fecha"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Seleccionar fecha"
@@ -48,9 +53,14 @@
             android:inputType="date"
             android:textSize="15sp"
             android:padding="15dp"
-            android:background="@drawable/edittext_custom"/>
+            android:background="@drawable/edittext_custom"
+            app:layout_constraintTop_toBottomOf="@+id/dia"
+            android:clickable="false"
+            android:focusable="false"
+            />
 
         <EditText
+            android:id="@+id/hora"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Seleccionar hora"
@@ -61,33 +71,16 @@
             android:inputType="time"
             android:textSize="15sp"
             android:padding="15dp"
-            android:background="@drawable/edittext_custom"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Día 2:"
-            android:fontFamily="@font/roboto_medium"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp" />
+            android:background="@drawable/edittext_custom"
+            app:layout_constraintTop_toBottomOf="@+id/fecha"
+            android:clickable="false"
+            android:focusable="false"/>
 
         <EditText
+            android:id="@+id/cantidad_horas"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Seleccionar fecha"
-            android:fontFamily="@font/roboto_regular"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="15dp"
-            android:inputType="date"
-            android:textSize="15sp"
-            android:padding="15dp"
-            android:background="@drawable/edittext_custom"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Seleccionar hora"
+            android:hint="Cantidad de horas del servicio"
             android:fontFamily="@font/roboto_regular"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
@@ -95,30 +88,36 @@
             android:inputType="time"
             android:textSize="15sp"
             android:padding="15dp"
-            android:background="@drawable/edittext_custom"/>
+            android:background="@drawable/edittext_custom"
+            app:layout_constraintTop_toBottomOf="@+id/hora"/>
 
         <TextView
+            android:id="@+id/dejanos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dejanos tu dirección y alguna referencia:"
             android:fontFamily="@font/roboto_medium"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/cantidad_horas"/>
 
         <EditText
+            android:id="@+id/edit1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Ubicación"
             android:fontFamily="@font/roboto_regular"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:inputType="text"
             android:textSize="15sp"
             android:padding="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/dejanos"
             android:background="@drawable/edittext_custom"/>
 
         <EditText
+            android:id="@+id/edit2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Ingresar referencia"
@@ -129,21 +128,27 @@
             android:inputType="text"
             android:textSize="15sp"
             android:padding="15dp"
-            android:background="@drawable/edittext_custom"/>
+            app:layout_constraintTop_toBottomOf="@+id/edit1"
+            android:background="@drawable/edittext_custom"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"/>
 
 
-    </LinearLayout>
 
     <Button
+        android:id="@+id/button_siguiente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="AÑADIR AL CARRITO"
+        android:text="SIGUIENTE"
         android:fontFamily="@font/roboto_medium"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
         android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="bottom"
         android:background="@drawable/rounded_button"
+        app:layout_constraintTop_toBottomOf="@+id/edit2"
         />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

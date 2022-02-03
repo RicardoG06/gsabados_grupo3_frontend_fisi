@@ -69,7 +69,7 @@ class SaveImageActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<ResponseHttp>, response: Response<ResponseHttp>) {
                     Log.d(TAG, "Body: ${response.body()}")
 
-                    saveUserInSession(response.body()?.data.toString())
+                        saveUserInSession(response.body()?.data.toString())
                 }
 
                 override fun onFailure(call: Call<ResponseHttp>, t: Throwable) {

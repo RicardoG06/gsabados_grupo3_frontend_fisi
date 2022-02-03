@@ -15,6 +15,7 @@ import com.example.dogscloud.activities.Fragments.menu.programacuidado.PantallaC
 import com.example.dogscloud.activities.Fragments.menu.programapaseo.PantallaPaseadorActivity
 import com.example.dogscloud.activities.Fragments.menu.programapaseo.PaseadorEscogido
 import com.example.dogscloud.activities.Fragments.menu.trabajadores.MisTrabajadores
+import com.example.dogscloud.models.Trabajadores
 import com.example.dogscloud.models.User
 import com.example.dogscloud.utils.SharedPref
 import com.google.gson.Gson
@@ -59,6 +60,7 @@ class InicioFragment : Fragment() {
 
     private fun goToCuidador(){
         val i = Intent(getActivity(), PantallaCuidadorActivity::class.java)
+        i.putExtra("id_rol", 2)
         getActivity()?.startActivity(i)
     }
 

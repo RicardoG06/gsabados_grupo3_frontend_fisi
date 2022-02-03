@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.Fragments.menu.programacuidado.CuidadorEscogido">
+    tools:context=".activities.Fragments.menu.programacuidado.InfoCompra">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,35 +20,21 @@
             app:titleTextColor="@color/white">
         </androidx.appcompat.widget.Toolbar>
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/circleimage_user"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/ic_person"
-            android:layout_marginTop="20dp"
-            app:civ_border_color="@color/black"
-            app:civ_border_width="5dp"
-            app:civ_circle_background_color="@color/white"
-            android:layout_gravity="center|top"/>
-
         <TextView
-            android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="67dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Daniel Santos Zapata Barreto"
+            android:text="Informacion del Servicio"
             android:textSize="25sp" />
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="40dp">
 
             <TextView
                 android:layout_width="120dp"
@@ -58,14 +44,14 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginRight="10dp"
                 android:fontFamily="@font/roboto_regular"
-                android:text="Telefono:"
+                android:text="Cuidador:"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:background="@drawable/rect_1"
                 android:shadowColor="@color/green"/>
 
             <TextView
-                android:id="@+id/telefono"
+                android:id="@+id/cuidador"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="-10dp"
@@ -91,21 +77,21 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
                 android:fontFamily="@font/roboto_regular"
-                android:text="Correo electronico:"
+                android:text="Popularidad:"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:background="@drawable/rect_1"/>
 
             <TextView
-                android:id="@+id/correo"
+                android:id="@+id/popularidad"
                 android:layout_width="200dp"
                 android:layout_height="42dp"
                 android:layout_marginLeft="-10dp"
-                android:gravity="center"
+                android:background="@drawable/rect_2"
                 android:fontFamily="@font/roboto_regular"
-                android:text="danielZapata@gmail.com"
-                android:textSize="15sp"
-                android:background="@drawable/rect_2"/>
+                android:gravity="center"
+                android:text="popu"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -122,13 +108,13 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginRight="10dp"
                 android:fontFamily="@font/roboto_regular"
-                android:text="Popularidad:"
+                android:text="Precio por hora:"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:background="@drawable/rect_1"/>
 
             <TextView
-                android:id="@+id/popularidad"
+                android:id="@+id/precio_x_hora_cuidado"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="-10dp"
@@ -153,13 +139,13 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
                 android:fontFamily="@font/roboto_regular"
-                android:text="Precio x hora de cuidado:"
+                android:text="Precio Total:"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:background="@drawable/rect_1"/>
 
             <TextView
-                android:id="@+id/precio_x_cuidado"
+                android:id="@+id/precio_Total"
                 android:layout_width="200dp"
                 android:layout_height="42dp"
                 android:layout_marginLeft="-10dp"
@@ -171,7 +157,6 @@
         </LinearLayout>
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -185,23 +170,115 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
                 android:fontFamily="@font/roboto_regular"
-                android:text="Precio x hora de paseo:"
+                android:text="Perrito a cuidar:"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:background="@drawable/rect_1"/>
 
             <TextView
-                android:id="@+id/precio_x_paseo"
+                android:id="@+id/nombre_perrito"
                 android:layout_width="200dp"
                 android:layout_height="42dp"
                 android:layout_marginLeft="-10dp"
                 android:gravity="center"
                 android:fontFamily="@font/roboto_regular"
-                android:text="37 soles x mascota"
+                android:text="Nombre_perrito"
                 android:textSize="15sp"
                 android:background="@drawable/rect_2"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Fecha cuidado:"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_1"/>
+
+            <TextView
+                android:id="@+id/fecha_cuidado"
+                android:layout_width="200dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Fecha"
+                android:textSize="15sp"
+                android:background="@drawable/rect_2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Hora inicio:"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_1"/>
+
+            <TextView
+                android:id="@+id/hora_inicio"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:text="San Isidro"
+                android:textSize="15sp"
+                android:background="@drawable/rect_2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Hor. de servicio:"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_1"/>
+
+            <TextView
+                android:id="@+id/hora_servicio"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:text="San Isidro"
+                android:textSize="15sp"
+                android:background="@drawable/rect_2"/>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -222,7 +299,37 @@
                 android:background="@drawable/rect_1"/>
 
             <TextView
-                android:id="@+id/direccion"
+                android:id="@+id/direccion_cliente"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:text="San Isidro"
+                android:textSize="15sp"
+                android:background="@drawable/rect_2"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Referencia:"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rect_1"/>
+
+            <TextView
+                android:id="@+id/referencia_cliente"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="-10dp"
@@ -239,12 +346,12 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button_go_to_solicitarcantidad"
+                android:id="@+id/button_go_to_añadir_carrito"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/purple"
                 android:fontFamily="@font/lato_bold"
-                android:text="¡Yo te elijo!"
+                android:text="¡añadir a pedido!"
                 android:textSize="20sp" />
 
         </LinearLayout>
@@ -252,4 +359,6 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

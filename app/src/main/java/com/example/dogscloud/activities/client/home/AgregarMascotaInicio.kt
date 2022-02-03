@@ -19,6 +19,7 @@ import com.example.dogscloud.providers.UsersProvider
 import com.example.dogscloud.utils.SharedPref
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.gson.Gson
+import com.tommasoberlose.progressdialog.ProgressDialogFragment
 import de.hdodenhof.circleimageview.CircleImageView
 import retrofit2.Call
 import retrofit2.Callback
@@ -99,11 +100,14 @@ class AgregarMascotaInicio : AppCompatActivity() {
                 id_user = id_user
             )
 
+            ProgressDialogFragment.showProgressBar(this)
+
             perritoProvider?.create(files!!,perrito)?.enqueue(object: Callback<ResponseHttp> {
                 override fun onResponse(call: Call<ResponseHttp>, response: Response<ResponseHttp>
                 ) {
                     Toast.makeText(this@AgregarMascotaInicio, response.body()?.message, Toast.LENGTH_LONG).show()
                     Toast.makeText(this@AgregarMascotaInicio, "Mascota agregada correctamente", Toast.LENGTH_LONG).show()
+                    ProgressDialogFragment.hideProgressBar(this@AgregarMascotaInicio)
                     Log.d("AgregarMascotaInicio", "Response: ${response}")
                     Log.d("AgregarMascotaInicio", "Body: ${response.body()}")
 
@@ -111,9 +115,14 @@ class AgregarMascotaInicio : AppCompatActivity() {
                     Log.d("AgregarMascotaInicio", "pass: ${user?.password}")
 
                     login()
+
+                    if(response.body()?.isSuccess == true){
+                        ResetForm()
+                    }
                 }
 
                 override fun onFailure(call: Call<ResponseHttp>, t: Throwable) {
+                    ProgressDialogFragment.hideProgressBar(this@AgregarMascotaInicio)
                     Log.d("AgregarMascotaInicio", "Se produjo un error ${t.message}")
                     Toast.makeText(this@AgregarMascotaInicio, "Se produjo un error ${t.message}", Toast.LENGTH_LONG).show()
                 }
@@ -123,6 +132,16 @@ class AgregarMascotaInicio : AppCompatActivity() {
         Log.d( "AgregarMascotaInicio", "El password es: $descripcion" )
         Log.d( "AgregarMascotaInicio", "El nombre es: $raza" )
         Log.d( "AgregarMascotaInicio", "El dni es: $edad" )
+    }
+
+    private fun ResetForm(){
+        edit_nombremascota?.setText("")
+        edit_descripcion?.setText("")
+        edit_raza?.setText("")
+        edit_edad?.setText("")
+        edit_descripcion?.setText("")
+        imageFile = null
+        circleImage_user?.setImageResource(R.drawable.camara)
     }
 
     private fun isValidForm(name: String,

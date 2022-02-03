@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
@@ -20,8 +22,26 @@
         android:theme="@style/Theme.Dogscloud"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activities.client.home.AgregarMascotaInicio"
+            android:name=".activities.Fragments.menu.programacuidado.ClientShoppingBagActivity"
             android:exported="false" />
+        <activity
+            android:name=".activities.Fragments.menu.programacuidado.InfoCompra"
+            android:exported="false"
+            android:parentActivityName=".activities.Fragments.menu.programacuidado.PantallaCuidadorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.Fragments.menu.programacuidado.map.ClientAddressMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Fragments.menu.programacuidado.SolicitarCantidadSimpleCuidado"
+            android:exported="false"
+            android:parentActivityName=".activities.Fragments.menu.programacuidado.PantallaCuidadorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.client.home.AgregarMascotaInicio"
+            android:exported="false"
+            android:parentActivityName=".activities.SaveImageActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activities.Fragments.menu.trabajadores.VerTrabajador"
             android:exported="true"
@@ -65,12 +85,12 @@
         <activity
             android:name=".activities.Fragments.menu.programacuidado.SolicitarCuidado"
             android:exported="true"
-            android:parentActivityName=".activities.Fragments.menu.programacuidado.SolicitarCantidadCu"
+            android:parentActivityName=".activities.Fragments.menu.programacuidado.PantallaCuidadorActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programacuidado.SolicitarCantidadCu"
             android:exported="true"
-            android:parentActivityName=".activities.Fragments.menu.programacuidado.SolicitarCuidado"
+            android:parentActivityName=".activities.Fragments.menu.programacuidado.PantallaCuidadorActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programacuidado.SeleccionarMascotaCu"
@@ -162,6 +182,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAnUnzHN03rafq8y7G3WMDaJ1fwoWz8qzg" />
     </application>
 
 </manifest>
