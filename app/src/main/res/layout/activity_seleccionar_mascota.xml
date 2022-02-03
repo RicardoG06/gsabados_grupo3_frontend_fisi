@@ -1,101 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.Fragments.menu.programapaseo.SeleccionarMascota">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/primaryColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/white">
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/titulo_mascota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccione la mascota"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_goneMarginLeft="20dp"
+        app:layout_goneMarginTop="36dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        />
+
+
+    <Button
+        android:id="@+id/btn_agregarmascotas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_button"
+        android:text="Agregar mascotas"
+        app:backgroundTint="@color/celeste"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_mascota"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:minHeight="?attr/actionBarSize"
-            android:background="@color/primaryColor"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclewViewPerritos"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:titleTextColor="@color/white">
-        </androidx.appcompat.widget.Toolbar>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SELECCIONE LA MASCOTA"
-            android:fontFamily="@font/roboto_medium"
-            android:textSize="20sp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="25dp"
-            android:textColor="#C88C0751"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            >
-
-            <TextView
-                android:layout_width="300dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:paddingLeft="20dp"
-                android:gravity="center_vertical"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Tofy - Shit Tzu"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:background="@drawable/rect_seleccionarmascota"
-                />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_check"
-                app:borderWidth="0dp"
-                android:elevation="5dp"
-                android:backgroundTint="@color/gray_light"
-                app:maxImageSize="40dp"
-                android:layout_marginTop="20dp"/>
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/AgregarMascotas"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:text="Agregar nueva mascota"
-            android:fontFamily="@font/roboto_medium"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/app"
-            android:layout_marginTop="20dp"
-            app:cornerRadius="10dp"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="220dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_agregarmascotas" />
 
         <Button
             android:id="@+id/button_go_to_solicitarcantidad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:text="Continuar"
+            android:text="CONTINUAR"
             android:fontFamily="@font/roboto_medium"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginBottom="30dp"
-            android:layout_gravity="bottom"
-            android:backgroundTint="@color/green"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_button"
             />
     </LinearLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

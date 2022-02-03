@@ -29,6 +29,7 @@
             android:layout_marginTop="20dp"/>
 
         <EditText
+            android:id="@+id/edit_nombremascota"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Su nombre es"
@@ -49,6 +50,7 @@
             android:layout_marginTop="20dp"/>
 
         <EditText
+            android:id="@+id/edit_descripcion"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Su descripción es"
@@ -69,6 +71,7 @@
             android:layout_marginTop="20dp"/>
 
         <EditText
+            android:id="@+id/edit_raza"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Su descripción es"
@@ -89,6 +92,7 @@
             android:layout_marginTop="20dp"/>
 
         <EditText
+            android:id="@+id/edit_edad"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Su descripción es"
@@ -108,6 +112,8 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="20dp"/>
 
+
+
     </LinearLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -120,21 +126,24 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="87dp"
         android:layout_gravity="bottom"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <Button
-            android:id="@+id/btn_confirm"
-            android:layout_width="match_parent"
+            android:id="@+id/btn_agregarmascotas"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:text="Guardar"
-            android:layout_marginTop="150dp"
+            android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_button"
             android:backgroundTint="@color/celeste"
-            android:background="@drawable/rounded_button"/>
+            android:text="Guardar" />
+
+
+
+
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

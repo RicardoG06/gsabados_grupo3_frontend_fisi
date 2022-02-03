@@ -22,7 +22,17 @@
         android:theme="@style/Theme.Dogscloud"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activities.Fragments.menu.programacuidado.ClientShoppingBagActivity"
+            android:name=".activities.Fragments.menu.programapaseo.InfoCompra2"
+            android:exported="false"
+            android:parentActivityName=".activities.Fragments.menu.programapaseo.PantallaPaseadorActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.Fragments.menu.programapaseo.SolicitarCantidadSimplePaseo"
+            android:exported="false"
+            android:parentActivityName=".activities.Fragments.menu.programapaseo.PantallaPaseadorActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.Fragments.menu.programapaseo.map.ClientAddressMapActivity2"
             android:exported="false" />
         <activity
             android:name=".activities.Fragments.menu.programacuidado.InfoCompra"
@@ -41,7 +51,7 @@
             android:name=".activities.client.home.AgregarMascotaInicio"
             android:exported="false"
             android:parentActivityName=".activities.SaveImageActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.trabajadores.VerTrabajador"
             android:exported="true"
@@ -65,12 +75,12 @@
         <activity
             android:name=".activities.Fragments.menu.programapaseo.MascotasPa.AgregarMascotasPa"
             android:exported="true"
-            android:parentActivityName=".activities.Fragments.menu.programapaseo.MascotasPa.MisMascotasPa"
+            android:parentActivityName=".activities.Fragments.menu.programapaseo.SeleccionarMascota"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programacuidado.MascotasCu.AgregarMascotasCu"
             android:exported="true"
-            android:parentActivityName=".activities.Fragments.menu.programacuidado.MascotasCu.MisMascotasCu"
+            android:parentActivityName=".activities.Fragments.menu.programacuidado.SeleccionarMascotaCu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programacuidado.MascotasCu.EditarMascotasCu"
@@ -139,7 +149,7 @@
         <activity
             android:name=".activities.Fragments.menu.programapaseo.SolicitarCantidad"
             android:exported="true"
-            android:parentActivityName=".activities.Fragments.menu.programapaseo.SolicitarPaseo"
+            android:parentActivityName=".activities.Fragments.menu.programapaseo.PantallaPaseadorActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programapaseo.SeleccionarMascota"

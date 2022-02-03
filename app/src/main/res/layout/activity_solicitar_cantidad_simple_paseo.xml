@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.Fragments.menu.programacuidado.SolicitarCantidadCu">
+    tools:context=".activities.Fragments.menu.programapaseo.SolicitarCantidadSimplePaseo">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Perrito destinado a cuidado"
+            android:text="Perrito destinado a paseo"
             android:fontFamily="@font/roboto_medium"
             android:textSize="20sp"
             android:layout_marginTop="30dp"
@@ -39,23 +39,12 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/gray"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclewViewPerritos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_agregarmascotas" />
-
-
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floating_go_to_seleccionarmascota"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_change"
+            android:src="@drawable/ic_add"
             app:borderWidth="0dp"
             android:elevation="5dp"
             android:backgroundTint="@color/white"
@@ -66,11 +55,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cambiar"
+            android:text="Agregar"
             android:fontFamily="@font/roboto_medium"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/gray"/>
+
 
         <EditText
             android:layout_width="200dp"
@@ -93,6 +83,13 @@
             android:layout_marginTop="50dp"
             android:gravity="center"
             android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/perro"
+                android:layout_gravity="center"
+                />
 
             <Button
                 android:id="@+id/button_go_to_solicitarpaseo"

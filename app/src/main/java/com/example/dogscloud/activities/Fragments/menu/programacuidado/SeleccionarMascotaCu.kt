@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dogscloud.R
+import com.example.dogscloud.activities.Fragments.menu.programacuidado.MascotasCu.AgregarMascotasCu
 import com.example.dogscloud.activities.Fragments.menu.programacuidado.MascotasCu.MisMascotasCu
 import com.example.dogscloud.activities.Fragments.menu.programapaseo.SolicitarCantidad
 import com.example.dogscloud.activities.MyToolbar
@@ -46,17 +47,20 @@ class SeleccionarMascotaCu : AppCompatActivity() {
         recyclerViewPerritos = findViewById(R.id.recyclewViewPerritos)
         recyclerViewPerritos?.layoutManager = LinearLayoutManager(this)
         buttonGoToSolicitarCantidad = findViewById(R.id.button_go_to_solicitarcantidad)
-        AgregarMascotas = findViewById(R.id.AgregarMascotas)
+        AgregarMascotas = findViewById(R.id.btn_agregarmascotas)
 
-        AgregarMascotas?.setOnClickListener{ goToAgregarMascotas() }
+
 
         trabajador = gson.fromJson(intent.getStringExtra("trabajador"), Trabajadores::class.java)
 
-        buttonGoToSolicitarCantidad?.setOnClickListener{ getPerritoFromSession(trabajador!!) }
-
-        Log.d("CuidadorEscogido" , "Nombre: ${trabajador?.name}")
-
         getUserFromSession()
+
+        buttonGoToSolicitarCantidad?.setOnClickListener{ getPerritoFromSession(trabajador!!) }
+        AgregarMascotas?.setOnClickListener{ goToAgregarMascotas(trabajador!!) }
+
+        Log.d("SeleccionarMascotaCu" , "Nombre: ${trabajador?.name}")
+
+
 
         adapter = PerritosAdapterConCheck(this,user?.perritos!!)
         recyclerViewPerritos?.adapter = adapter
@@ -78,12 +82,13 @@ class SeleccionarMascotaCu : AppCompatActivity() {
     private fun goToSolicitarCantidad(trabajador: Trabajadores, perri : Perritos){
         val i = Intent(this, SolicitarCantidadCu::class.java)
         i.putExtra("trabajador", trabajador.toJson())
-        i.putExtra("perrito",perri.toJson())
+        i.putExtra("perrito", perri.toJson())
         startActivity(i)
     }
 
-    private fun goToAgregarMascotas(){
-        val i = Intent(this, MisMascotasCu::class.java)
+    private fun goToAgregarMascotas(trabajador: Trabajadores){
+        val i = Intent(this, AgregarMascotasCu::class.java)
+        i.putExtra("trabajador", trabajador.toJson())
         startActivity(i)
     }
 
