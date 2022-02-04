@@ -123,7 +123,7 @@ class InfoCompra : AppCompatActivity() {
             raza_perrito = perri?.raza,
             fecha_cuidado = fecha,
             hora_inicio = hora,
-            hora_servicio = cantHoras,
+            horas_servicio = cantHoras,
             direccion_cliente = direccion,
             referencia_cliente = referencia,
             tipo_trabajador = "Cuidador"

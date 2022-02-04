@@ -84,7 +84,7 @@ class InfoCompra2 : AppCompatActivity() {
 
         //
         var cantHor = cantHoras?.toInt()
-        var horasTra = trabajador?.precio_x_hora_cuidado
+        var horasTra = trabajador?.precio_x_hora_paseo
         var horasT = horasTra?.toInt()
 
         Log.d("InfoCompra", "horasTra : $horasT")
@@ -110,14 +110,14 @@ class InfoCompra2 : AppCompatActivity() {
         carrito_compra = CarritoCompra(
             nombre_cuidador = trabajador?.name,
             popularidad_cuidador = trabajador?.popularidad,
-            precio_x_hora_cuidador = trabajador?.precio_x_hora_cuidado,
+            precio_x_hora_paseador = trabajador?.precio_x_hora_paseo,
             imagen_trabajador = trabajador?.image,
             precio_total = precioT,
             nombre_perrito = perri?.name,
             raza_perrito = perri?.raza,
             fecha_cuidado = fecha,
             hora_inicio = hora,
-            hora_servicio = cantHoras,
+            horas_servicio = cantHoras,
             direccion_cliente = direccion,
             referencia_cliente = referencia,
             tipo_trabajador = "Paseador"

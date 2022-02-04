@@ -25,7 +25,7 @@ class ShoppingBagAdapter(val context: Activity, val carrito_compra: ArrayList<Ca
     val sharedPreferences = SharedPref(context)
 
     //init {
-      //  (context as MisPedidosFragment).setTotal(getTotal())
+      //  (requireActivity() as MisPedidosFragment).setTotal(getTotal())
     //}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingBagViewHolder {

@@ -20,64 +20,35 @@
             app:titleTextColor="@color/white">
         </androidx.appcompat.widget.Toolbar>
 
-        <com.mikhaellopez.circularimageview.CircularImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/paseador"
-            android:layout_gravity="center_horizontal"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleimage_user"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_person"
             android:layout_marginTop="20dp"
-            app:civ_shadow="true"
-            app:civ_shadow_radius="5dp"
-            app:civ_shadow_color="#9C9B9B"
-            app:civ_shadow_gravity="center"/>
+            app:civ_border_color="@color/black"
+            app:civ_border_width="5dp"
+            app:civ_circle_background_color="@color/white"
+            android:layout_gravity="center|top"/>
 
         <TextView
+            android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="30dp"
             android:fontFamily="@font/roboto_medium"
             android:text="Daniel Santos Zapata Barreto"
             android:textSize="25sp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_star_yellow" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_star_yellow" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_star_yellow" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_star_yellow" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_star_grey" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:layout_width="120dp"
@@ -94,6 +65,7 @@
                 android:shadowColor="@color/green"/>
 
             <TextView
+                android:id="@+id/telefono"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="-10dp"
@@ -125,6 +97,7 @@
                 android:background="@drawable/rect_1"/>
 
             <TextView
+                android:id="@+id/correo"
                 android:layout_width="200dp"
                 android:layout_height="42dp"
                 android:layout_marginLeft="-10dp"
@@ -149,12 +122,13 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginRight="10dp"
                 android:fontFamily="@font/roboto_regular"
-                android:text="Disponibilidad:"
+                android:text="Popularidad:"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:background="@drawable/rect_1"/>
 
             <TextView
+                android:id="@+id/popularidad"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="-10dp"
@@ -185,6 +159,7 @@
                 android:background="@drawable/rect_1"/>
 
             <TextView
+                android:id="@+id/precio_x_cuidado"
                 android:layout_width="200dp"
                 android:layout_height="42dp"
                 android:layout_marginLeft="-10dp"
@@ -196,6 +171,7 @@
         </LinearLayout>
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -215,6 +191,7 @@
                 android:background="@drawable/rect_1"/>
 
             <TextView
+                android:id="@+id/precio_x_paseo"
                 android:layout_width="200dp"
                 android:layout_height="42dp"
                 android:layout_marginLeft="-10dp"
@@ -245,6 +222,7 @@
                 android:background="@drawable/rect_1"/>
 
             <TextView
+                android:id="@+id/direccion"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="-10dp"
@@ -254,7 +232,6 @@
                 android:textSize="15sp"
                 android:background="@drawable/rect_2"/>
         </LinearLayout>
-
 
     </LinearLayout>
 

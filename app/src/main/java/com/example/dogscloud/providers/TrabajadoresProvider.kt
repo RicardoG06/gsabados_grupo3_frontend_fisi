@@ -20,4 +20,8 @@ class TrabajadoresProvider {
     fun findbyrol(id_rol: Int): Call<ArrayList<Trabajadores>>?{
         return TrabajadoresRoutes?.findByrol(id_rol)
     }
+
+    fun TraerTrabajadores() : Call<ArrayList<Trabajadores>>?{
+        return TrabajadoresRoutes?.TraerTrabajadores()
+    }
 }

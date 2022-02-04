@@ -22,15 +22,21 @@
         android:theme="@style/Theme.Dogscloud"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.Fragments.mispedidos.installments.ClientPaymentsInstallmentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Fragments.mispedidos.ClientPaymentFormActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.Fragments.menu.programapaseo.InfoCompra2"
             android:exported="false"
             android:parentActivityName=".activities.Fragments.menu.programapaseo.PantallaPaseadorActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programapaseo.SolicitarCantidadSimplePaseo"
             android:exported="false"
             android:parentActivityName=".activities.Fragments.menu.programapaseo.PantallaPaseadorActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Fragments.menu.programapaseo.map.ClientAddressMapActivity2"
             android:exported="false" />
